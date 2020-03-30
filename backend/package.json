@@ -11,11 +11,6 @@
     "node": ">=10.13"
   },
   "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --collectCoverage",
-    "test:verbose": "jest --watch --verbose",
-    "test:verbose:debug": "DEBUG='TacTecthTest::test' npm run test:verbose",
-    "test:verbose:debug:specific": "DEBUG='TacTecthTest::test' npm run test:verbose unit.test.js",
     "start": "nodemon --watch .env --watch src --exec babel-node src --source-maps",
     "debug": "DEBUG='TacTech::*' npm run start",
     "lint": "eslint src/**/*.js --fix && echo Lint passed ❤",
