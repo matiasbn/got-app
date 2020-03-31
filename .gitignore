@@ -1,4 +1,4 @@
 .idea/
 node_modules/
-.vscode/
-hacker-news-app
+.vscode
+.DS_Store
