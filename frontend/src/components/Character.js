@@ -24,7 +24,7 @@ export default function Character(props) {
         <Button
           variant="success"
           size="sm"
-          onClick={() => showCharacter(character.id)}
+          onClick={() => showCharacter(character._id)}
         >
           {`About ${character.name}`}
         </Button>

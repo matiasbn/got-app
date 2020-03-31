@@ -26,7 +26,9 @@ module.exports = {
     "array-bracket-spacing": ['error', 'always'],
     'object-curly-newline': ["error", { "multiline": true }],
     'react/prop-types': 0,
-    "react/jsx-first-prop-new-line": ["error", "always"],
-    "semi": ["error", "always"]
+    "react/jsx-first-prop-new-line": ["error", "multiline"],
+    "semi": ["error", "always"],
+    "no-underscore-dangle": 0,
+    "react/no-array-index-key": 0
   },
 };
