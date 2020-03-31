@@ -19,13 +19,13 @@ import uniqueValidator from 'mongoose-unique-validator'
 // }
 
 const CharacterSchema = new Schema({
-  id: {
-    type: Schema.ObjectId,
+  name: {
+    type: String,
     required: true,
     unique: true,
   },
-  name: {
-    type: String,
+  rank: {
+    type: Number,
     required: true,
   },
   sex: {
@@ -42,13 +42,12 @@ const CharacterSchema = new Schema({
   },
   books: {
     type: Array,
-    required: true,
   },
   titles: {
     type: Array,
     required: true,
   },
-  imageLink: {
+  image: {
     type: String,
     required: true,
   },

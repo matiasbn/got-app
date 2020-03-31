@@ -12,10 +12,8 @@ const characters = async (request, response) => {
   try {
     // fetch specific data
     const projection = {
-      _id: 0,
-      __v: 0,
-      createdAt: 0,
-      updatedAt: 0,
+      name: 1,
+      house: 1,
     }
     // Fetch not deleted characters
     const chars = await Character.find({ }, projection)
@@ -35,12 +33,11 @@ const search = async (request, response) => {
     if (!ObjectId.isValid(id)) return response.error(`${id} is not a valid Mongo ObjectID`, 422)
     // fetch specific data
     const projection = {
-      _id: 0,
       __v: 0,
       createdAt: 0,
       updatedAt: 0,
     }
-    const char = await Character.findOne({ id }, projection).lean()
+    const char = await Character.findOne({ _id: id }, projection).lean()
     debugControllers(char)
     return response.success(char)
   } catch (error) {

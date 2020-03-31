@@ -1,6 +1,6 @@
 {
   "extends": [
-    "airbnb-base",
+    "airbnb-base"
     // "plugin:unicorn/recommended"
   ],
   "plugins": [
@@ -18,7 +18,8 @@
     "spaced-comment": [
       "error",
       "always"
-    ]
+    ],
+    "max-len": 0
   },
   "env": {
     "node": true,
