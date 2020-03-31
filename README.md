@@ -1,3 +1,17 @@
+# Como usar
+
+La app está completamente dockerizada, por lo que una vez teniendo [Docker](https://docs.docker.com/install/) instalado basta con correr desde el path raiz:
+```
+docker-compose build
+docker-compose up
+```
+
+El front está corriendo en el puerto 3000 de localhost, el back en el puerto 3001, y la base de datos Mongo está expuesta en el puerto 27018, base de datos prueba-tactech. Los personajes están guardados en la colección characters.
+
+Se cuenta con dos rutas auxiliares, la primera es [/](http://localhost:3001/) que entrega el uptime de la Api con un mensaje de alive. La segunda es [/populate](http://localhost:3001/populate) con la cual se llena la base de datos con la información de personajes. 
+
+No es necesario correr populate una vez iniciada la aplicación, es solo en caso de eliminar datos de MongoDB para volver a completarla.
+
 # Prueba de Experiencia (FullStack)
 Esta prueba fue ideada para medir el nivel de conocimientos y experiencia tanto en sintaxis como de las distintas API's de `javascript`.
 
@@ -97,7 +111,7 @@ Se debera implementar una aplicación en Backend, la cual debera contener un ser
 Una vez almacenados los personajes, se deberan implementar dos endpoints para acceso publico:
 
 | Metodo | Endpoint        | Descripción                                                   |
-|--------|-----------------|---------------------------------------------------------------|
+| ------ | --------------- | ------------------------------------------------------------- |
 | GET    | /characters/:id | Obtiene la información del personaje determinado por su `id`  |
 | GET    | /characters     | Obtiene una lista de personjes, la cual permite la paginación |
 
@@ -111,7 +125,7 @@ Deberás crear un proyecto a partir de cero en `React`, `Angular`, `React Native
 Una vez implementado el proyecto front, se debera proceder a crear dos vistas:
  
 | Vista | Descripción                                                                                                                                                                       |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | List  | Aca se debera listar todos los personajes con un servicio de paginación, limitando a 10 personajes por pagina e implementado un buscador de texto para filtrar por nombre o casa. |
 | View  | Aca debe mostrarse la información referente al persoje objetivo, incluyendo su imagen(si es que tiene), sexo, slug, rank, casa, libros y titulos                                  |
 
